@@ -203,11 +203,10 @@ Suricata - это IDS/IPS, способная выполнять глубоки�
 
 1. Оповещение при обнаружении специфического HTTP запроса:
 
-  `alert http any any -> any any (msg:"Detected specific HTTP request"; content:"/admin"; http_uri; sid:1000002; rev:1;)`
-  
-  это правило реагирует при обнаружении в URI строки `/admin`
+   `alert http any any -> any any (msg:"Detected specific HTTP request"; content:"/admin"; http_uri; sid:1000002; rev:1;)`
+   это правило реагирует при обнаружении в URI строки `/admin`
 
-2. Оповещение при обнаружении специфического User-Agent в HTTP запросе
+3. Оповещение при обнаружении специфического User-Agent в HTTP запросе
 
    `alert http any any -> any any (msg:"Detected suspicious user-agent"; content:"SuspiciousAgent"; http_header; sid:1000003; rev:1;)`
 
