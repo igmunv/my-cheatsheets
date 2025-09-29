@@ -24,4 +24,12 @@ ip link set dev eth1 up
 ip link set dev br0 up
 ```
 
+### Включаем ip_forward
+```
+nano /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+sysctl -p
+```
+
 Теперь трафик будет проходить 'сквозь', но **sniffer** будет видеть его и сможет им управлять благодаря мосту
